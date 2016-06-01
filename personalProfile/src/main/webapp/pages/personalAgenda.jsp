@@ -15,10 +15,10 @@
 		<link rel="icon" href="../resources/img/perfil2.jpg">
 	</head>
 	<body>
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<h4>Agenda Pessoal</h4>
+						<a class="navbar-brand" href="#">Agenda Pessoal</a>
 					</div>
 			  	</div>
 			</nav>
@@ -29,7 +29,7 @@
 						class="imagemPerfil">
 					<button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
-					<button type="button" class="btn btn-default" onclick="redirecionarEmails()">E-mails</button>
+					<button type="button" class="btn btn-default" onclick="redirecionarGaleria()">Galeria</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarTelefones()">Telefones</button>
 				</div>
 			</div>

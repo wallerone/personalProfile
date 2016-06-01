@@ -15,10 +15,10 @@
 		<link rel="icon" href="../resources/img/perfil2.jpg">
 	</head>
 	<body>
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<h4>E-mails</h4>
+						<a class="navbar-brand" href="#">Galeria</a>
 					</div>
 			  	</div>
 			</nav>
@@ -29,13 +29,36 @@
 						class="imagemPerfil">
 					<button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
-					<button type="button" class="btn btn-default" onclick="redirecionarEmails()">E-mails</button>
+					<button type="button" class="btn btn-default" onclick="redirecionarGaleria()">Galeria</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarTelefones()">Telefones</button>
 				</div>
 			</div>
 		<main>
 			<div class="corpoDireito">
-				
+				<div class="bodyDados">
+					<button class="btn btn-primary" type="button">Inserir foto</button>
+					<div class="row">
+						<div class="col-md-6 divCentro">
+							<img alt="Imagem Galeria 1" src="../resources/img/galeria1.jpg"
+								class="imagemGaleria">
+						</div>
+						<div class="col-md-6 divCentro">
+							<img alt="Imagem Galeria 2" src="../resources/img/galeria2.jpg"
+								class="imagemGaleria">
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-6 divCentro">
+							<img alt="Imagem Galeria 3" src="../resources/img/galeria3.jpg"
+								class="imagemGaleria">
+						</div>
+						<div class="col-md-6 divCentro">
+							<img alt="Imagem Galeria 4" src="../resources/img/galeria4.jpg"
+								class="imagemGaleria">
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	</body>
