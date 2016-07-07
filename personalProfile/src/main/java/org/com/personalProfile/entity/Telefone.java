@@ -18,6 +18,27 @@ public class Telefone implements Serializable{
 	private String email;
 	
 	private Long usuario_id;
+	
+
+	public Telefone() {
+	}
+
+	public Telefone(String nomePessoa, String numero, String email, Long usuario_id) {
+		super();
+		this.nomePessoa = nomePessoa;
+		this.numero = numero;
+		this.email = email;
+		this.usuario_id = usuario_id;
+	}
+
+	public Telefone(Long id, String nomePessoa, String numero, String email, Long usuario_id) {
+		super();
+		this.id = id;
+		this.nomePessoa = nomePessoa;
+		this.numero = numero;
+		this.email = email;
+		this.usuario_id = usuario_id;
+	}
 
 	public Long getId() {
 		return id;

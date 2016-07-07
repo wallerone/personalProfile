@@ -15,12 +15,16 @@ public class TelefoneModel {
 		return getTelefoneDao().buscaTelefoneById(id);
 	}
 
-	public List<Telefone> buscaLivroByUsuarioId(Long usuarioId) {
+	public List<Telefone> buscaTelefoneByUsuarioId(Long usuarioId) {
 		return getTelefoneDao().buscaTelefonesByUsuarioId(usuarioId);
 	}
 	
-	public void salvarAlterarTelefone(Telefone telefone){
-		getTelefoneDao().salvarAlterarTelefone(telefone);
+	public boolean salvarAlterarTelefone(Telefone telefone){
+		return getTelefoneDao().salvarAlterarTelefone(telefone);
+	}
+	
+	public boolean removerTelefone(Long id){
+		return getTelefoneDao().removerTelefone(id);
 	}
 	
 	public TelefoneDao getTelefoneDao() {

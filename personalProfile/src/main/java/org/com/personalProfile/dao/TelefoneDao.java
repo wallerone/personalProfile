@@ -169,7 +169,43 @@ public class TelefoneDao {
 				conn.close();
 			}
 		}
-		
+	}
+	
+	private boolean removerTelefoneAux(Long id) throws SQLException{
+		Connection conn = null;
+		PreparedStatement ps = null;
+		try {
+			conn = ConnectionFactory.createConnection();
+			conn.setAutoCommit(false);
+			StringBuilder sql = new StringBuilder();
+			sql.append(" delete from telefone where id = ? ");
+			ps = conn.prepareStatement(sql.toString());
+			ps.setLong(1, id);
+			ps.executeUpdate();
+			
+			conn.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			conn.rollback();
+			return false;
+		}finally{
+			if(ps != null){
+				ps.close();
+			}
+			if(conn!= null){
+				conn.close();
+			}
+		}
+		return true;
+	}
+	
+	public boolean removerTelefone(Long id){
+		try {
+			return removerTelefoneAux(id);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 }
