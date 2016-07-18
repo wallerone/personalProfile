@@ -10,8 +10,8 @@ function redirecionarAgendaPessoal(){
 	window.location="personalAgenda.jsp";
 }
 
-function redirecionarEmails(){
-	window.location="personalEmails.jsp";
+function redirecionarGaleria(){
+	window.location="personalGaleria.jsp";
 }
 
 function redirecionarTelefones(){

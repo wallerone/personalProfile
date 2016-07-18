@@ -15,10 +15,10 @@
 		<link rel="icon" href="../resources/img/perfil2.jpg">
 	</head>
 	<body>
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-inverse navbar-fixed-top">
 				<div class="container">
 					<div class="navbar-header">
-						<h4>Dados Pessoais</h4>
+						<a class="navbar-brand" href="#">Dados Pessoais</a>
 					</div>
 			  	</div>
 			</nav>
@@ -29,16 +29,47 @@
 						class="imagemPerfil">
 					<button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
-					<button type="button" class="btn btn-default" onclick="redirecionarEmails()">E-mails</button>
+					<button type="button" class="btn btn-default" onclick="redirecionarGaleria()">Galeria</button>
 					<button type="button" class="btn btn-default" onclick="redirecionarTelefones()">Telefones</button>
 				</div>
 			</div>
 		<main>
 			<div class="corpoDireito">
-				Nome:
-				Endereço:
-				Telefone:
-				E-mail:
+				<div class="bodyDados">
+					<div class="row divCampos">
+						<div class="col-md-2">
+							Nome:
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="telefone" class="form-control"/> 
+						</div>
+					</div>
+					<div class="row divCampos">
+						<div class="col-md-2">
+							Endereço:
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="telefone" class="form-control"/> 
+						</div>
+					</div>
+					<div class="row divCampos">
+						<div class="col-md-2">
+							Telefone:
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="telefone" class="form-control"/> 
+						</div>
+					</div>
+					<div class="row divCampos">
+						<div class="col-md-2">
+							E-mail:
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="email" class="form-control"/> 
+						</div>
+					</div>
+					
+				</div>
 			</div>
 		</main>
 	</body>

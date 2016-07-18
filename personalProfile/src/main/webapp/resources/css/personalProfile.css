@@ -18,6 +18,8 @@
 	top:50px;
 	float:left;
 	width:15%;
+	background-color:#333;
+	height: 93%;
 }
 .corpoDireito{
 	top:50px;
@@ -35,3 +37,35 @@ main{
 	float:right;
 	width :85%;
 }
+.bodyDados{
+	margin:30px;
+}
+.divCampos{
+	margin: 5px;
+}
+.tableTelefone tbody{
+	cursor:pointer;
+}
+.tableTelefone tbody tr:hover{
+	background-color:#d3d3d3;
+}
+.tableGaleria tbody{
+	cursor:pointer;
+}
+.tableGaleria tbody tr:hover{
+	background-color:#d3d3d3;
+}
+.imagemGaleria{
+	margin: 10px;
+	width:inherit;
+	border:10px solid #333;
+	border-radius:10px;
+}
+.divCentro{
+	text-align:center;
+}
+.paginacaoTelefone{
+	width:100%;
+	text-align:center;
+}
+
