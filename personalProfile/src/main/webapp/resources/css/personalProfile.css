@@ -69,3 +69,10 @@ main{
 	text-align:center;
 }
 
+.bodyNovoEvento{
+	top: 10px;
+	float:right;
+	width:33%;
+	height: 93%;
+	vertical-align: baseline;
+}
