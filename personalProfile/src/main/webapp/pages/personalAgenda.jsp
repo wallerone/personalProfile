@@ -77,7 +77,44 @@
                         
         <main>
             <div class="corpoDireito">
-
+            	<form>
+				<div class="bodyNovoEvento">
+                  <div class="row divCampos">
+						<div class="col-md-2">
+							Nome:
+						</div>
+				  		<div class="col-md-6">
+							<input type="text" id="nomeEvento" class="form-control"/> 
+						</div>
+                  </div>
+                  <div class="row divCampos">
+						<div class="col-md-2">
+							Local:
+						</div>
+						<div class="col-md-6">
+							<input type="text" id="localEvento" class="form-control"/> 
+						</div>
+                  </div>
+                  <div class="row divCampos">
+						<div class="col-md-2">
+							Data:
+						</div>
+						<div class="col-md-6">
+							<input type="date" id="dataEvento" class="form-control"/> 
+						</div>
+                 </div>
+                 <div class="row divCampos">
+						<div class="col-md-2">
+							Horario:
+						</div>
+				 <div class="col-md-6">
+							<input type="text" id="horarioEvento" class="form-control"/> 
+						</div>
+                 </div>
+                 
+                  <button class="btn btn-primary" type="button" nome="action" value="adicionar">Adicionar Evento</button>
+			   </div>
+			   </form>
             </div>
         </main>
         
