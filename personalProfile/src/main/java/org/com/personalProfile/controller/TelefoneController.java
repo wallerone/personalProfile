@@ -2,6 +2,8 @@ package org.com.personalProfile.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -27,8 +29,41 @@ public class TelefoneController extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		String action = req.getParameter("searchAction");
+		if (action != null) {
+			if(action.equals("buscaTelefoneById")){
+				buscaTelefoneById(req, resp);
+			}else if(action.equals("buscaByItem")){
+				buscaTelefoneByQuery(req, resp);
+			}
+		} else {
+			List<Telefone> result = getTelefoneModel().buscaTelefoneByQuery(null, UtilUsuario.getUsusarioLogado(req));  
+			forwardListTelefones(req, resp, result);
+		}
 	}
+	
+    private void buscaTelefoneById(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        long idTelefone = Long.valueOf(req.getParameter("idTelefone"));
+        Telefone telefone = null;
+        try {
+        	telefone = getTelefoneModel().buscaTelefoneById(idTelefone);
+        } catch (Exception ex) {
+            Logger.getLogger(TelefoneController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        req.setAttribute("telefone", telefone);
+        req.setAttribute("action", "editar");
+        String nextJSP = "/pages/personalTelefoneAdd.jsp";
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+        dispatcher.forward(req, resp);
+    }
+    
+    private void buscaTelefoneByQuery(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        String query = req.getParameter("queryItem");
+        List<Telefone> result = getTelefoneModel().buscaTelefoneByQuery(query, UtilUsuario.getUsusarioLogado(req));
+        forwardListTelefones(req, resp, result);
+    }
 	
 	@Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,6 +74,10 @@ public class TelefoneController extends HttpServlet{
 	    	editarLivro(req, resp);
 	    }else if(action.equals("remover")){
 	    	removerTelefone(req, resp);
+	    }else if(action.equals("novo")){
+	    	String nextJSP = "/pages/personalTelefoneAdd.jsp";
+	        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
+	        dispatcher.forward(req, resp);
 	    }
 	}
 	
@@ -65,14 +104,14 @@ public class TelefoneController extends HttpServlet{
     	String nomePessoa = req.getParameter("nomePessoa");
         String numero = req.getParameter("numero");
         String email = req.getParameter("email");
-        String usuarioId = req.getParameter("usuarioId");
+        
         long idTelefone = Integer.valueOf(req.getParameter("idTelefone"));
         
-        Telefone telefone = new Telefone(idTelefone,nomePessoa, numero, email, Long.valueOf(usuarioId));
+        Telefone telefone = new Telefone(idTelefone,nomePessoa, numero, email, UtilUsuario.getUsusarioLogado(req).getId());
         
         getTelefoneModel().salvarAlterarTelefone(telefone);
         
-        List<Telefone> result = getTelefoneModel().buscaTelefoneByUsuarioId(Long.valueOf(usuarioId));  
+        List<Telefone> result = getTelefoneModel().buscaTelefoneByUsuarioId(UtilUsuario.getUsusarioLogado(req).getId());  
         req.setAttribute("idTelefone", telefone.getId());
         req.setAttribute("message", "Telefone alterado com sucesso!");
         forwardListTelefones(req, resp, result);
@@ -90,7 +129,7 @@ public class TelefoneController extends HttpServlet{
     
     private void forwardListTelefones(HttpServletRequest req, HttpServletResponse resp, List<Telefone> listTelefones)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/personalTelefone.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/pages/personalTelefone.jsp");
         req.setAttribute("listTelefones", listTelefones);
         dispatcher.forward(req, resp);
     }

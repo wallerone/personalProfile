@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.com.personalProfile.entity.Telefone;
+import org.com.personalProfile.entity.Usuario;
 import org.com.personalProfile.utils.ConnectionFactory;
 
 /**
@@ -15,6 +16,54 @@ import org.com.personalProfile.utils.ConnectionFactory;
  *
  */
 public class TelefoneDao {
+	
+	public List<Telefone> buscaTelefoneByQuery(String query, Usuario usuario) {
+		Connection conn = ConnectionFactory.createConnection();
+		
+		if(conn!= null){
+			try {
+				StringBuilder sql = new StringBuilder();
+				sql.append(" select id, nomePessoa, numero, email, usuario_id from telefone ");
+//				sql.append(" where usuario_id = ? ");
+				if(query!= null){
+					sql.append(" where ( nomePessoa like '%?%'  or ");
+					sql.append(" numero like '%?%' or ");
+					sql.append(" email like '%?%' )");
+				}
+				PreparedStatement ps = conn.prepareStatement(sql.toString());
+//				ps.setLong(1, usuario.getId());
+				if(query!= null){
+					ps.setString(2, query);
+					ps.setString(3, query);
+					ps.setString(4, query);
+				}
+				
+				ResultSet rs = ps.executeQuery();
+				Telefone telefone;
+				List<Telefone> listTelefone = new ArrayList<Telefone>();
+				while(rs.next()){
+					telefone = new Telefone();
+					telefone.setId(rs.getLong("id"));
+					telefone.setNomePessoa(rs.getString("nomePessoa"));
+					telefone.setNumero(rs.getString("numero"));
+					telefone.setEmail(rs.getString("email"));
+					telefone.setUsuario_id(rs.getLong("usuario_id"));
+					listTelefone.add(telefone);
+				}
+				return listTelefone;
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally{
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return null;
+	}
 	
 	
 	public Telefone buscaTelefoneById(Long id){

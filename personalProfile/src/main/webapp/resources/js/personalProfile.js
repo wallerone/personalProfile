@@ -15,5 +15,5 @@ function redirecionarGaleria(){
 }
 
 function redirecionarTelefones(){
-	window.location="personalTelefone.jsp";
+	window.location="telefones";
 }

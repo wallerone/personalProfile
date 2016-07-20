@@ -26,127 +26,125 @@
                 
 	</head>
 	<body>
-                        <!-- Navigation -->
-                        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-                            <div class="container topnav">
-                                <!-- Brand and toggle get grouped for better mobile display -->
-                                <div class="navbar-header">
-                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                        <span class="sr-only">Toggle navigation</span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                    <a class="navbar-brand topnav navbar-brand" href="#">Dados Pessoais</a>
-                                </div>
-                                <!-- Collect the nav links, forms, and other content for toggling -->
-                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                    <ul class="nav navbar-nav navbar-right">
-                                        <li>
-                                            <a href="http://localhost:8084/personalProfile/login.jsp">Personal Profile</a>
-                                        </li>
-                                </div>
-                                <!-- /.navbar-collapse -->
-                            </div>
-                            <!-- /.container -->
-                        </nav>
+        <!-- Navigation -->
+	    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+	        <div class="container topnav" style="margin-left:inherit !important">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand topnav navbar-brand" href="#">Dados Pessoais</a>
+	            </div>
+	            <!-- Collect the nav links, forms, and other content for toggling -->
+	            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li>
+	                        <a href="http://localhost:8084/personalProfile/login.jsp">Personal Profile</a>
+	                    </li>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </div>
+	        <!-- /.container -->
+	    </nav>
         
-        
-                        <!-- Header -->
-                        <div class="intro-header-dadospessoais">
-                            <div class="container">
+        <!-- Header -->
+        <div class="intro-header-dadospessoais">
+            <div class="container" style="margin-left:inherit !important">
 
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <div class="intro-message">
-                                            <!-- Menu Header -->
-                                            <div class="barraLadoEsquerdo">
-                                                <div class="btn-group-vertical menuEsquerdo" role="group">
-                                                    <img alt="Foto do perfil" src="../resources/img/perfil.jpg"
-                                                                class="imagemPerfil">
-                                                    <button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
-                                                    <button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
-                                                    <button type="button" class="btn btn-default" onclick="redirecionarGaleria()">Galeria</button>
-                                                    <button type="button" class="btn btn-default" onclick="redirecionarTelefones()">Telefones</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="intro-message">
+                            <!-- Menu Header -->
+                            <div class="barraLadoEsquerdo">
+                                <div class="btn-group-vertical menuEsquerdo" role="group">
+                                    <img alt="Foto do perfil" src="../resources/img/perfil.jpg"
+                                                class="imagemPerfil">
+                                    <button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
+                                    <button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
+                                    <button type="button" class="btn btn-default" onclick="redirecionarGaleria()">Galeria</button>
+                                    <button type="button" class="btn btn-default" onclick="redirecionarTelefones()">Telefones</button>
                                 </div>
-                                <!-- Dados Pessoais // Preencher -->
-                                <main>
-                                    <div class="corpoDireito">
-                                        <div class="bodyDados">
-                                            <div class="row divCampos">
-						<div class="col-md-2">
-							Nome:
-						</div>
-						<div class="col-md-6">
-							<input type="text" id="telefone" class="form-control"/> 
-						</div>
-                                            </div>
-                                            <div class="row divCampos">
-						<div class="col-md-2">
-							Endereço:
-						</div>
-						<div class="col-md-6">
-							<input type="text" id="telefone" class="form-control"/> 
-						</div>
-                                            </div>
-                                            <div class="row divCampos">
-						<div class="col-md-2">
-							Telefone:
-						</div>
-						<div class="col-md-6">
-							<input type="text" id="telefone" class="form-control"/> 
-						</div>
-                                            </div>
-                                            <div class="row divCampos">
-						<div class="col-md-2">
-							E-mail:
-						</div>
-						<div class="col-md-6">
-							<input type="text" id="email" class="form-control"/> 
-						</div>
-                                            </div>
-					
-                                        </div>
-                                    </div>
-                                </main>
                             </div>
-                            <!-- /.container -->
-        
                         </div>
-                        <!-- /.intro-header -->
-			
-                        <div class="banner">
-
-                            <div class="container">
-
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <h2>Conheça mais em:</h2>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <ul class="list-inline banner-social-buttons">
-                                            <li>
-                                                <a href="https://twitter.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://github.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="https://facebook.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                                            </li>
-                                        </ul>
-                                    </div>
+                    </div>
+                </div>
+                <!-- Dados Pessoais // Preencher -->
+                    <main>
+                        <div class="corpoDireito">
+                            <div class="bodyDados">
+                                <div class="row divCampos">
+									<div class="col-md-2">
+										Nome:
+									</div>
+									<div class="col-md-6">
+										<input type="text" id="telefone" class="form-control"/> 
+									</div>
+								</div>
+								<div class="row divCampos">
+									<div class="col-md-2">
+										Endereço:
+									</div>
+									<div class="col-md-6">
+										<input type="text" id="telefone" class="form-control"/> 
+									</div>
+								</div>
+                                <div class="row divCampos">
+									<div class="col-md-2">
+										Telefone:
+									</div>
+									<div class="col-md-6">
+										<input type="text" id="telefone" class="form-control"/> 
+									</div>
+                               	</div>
+                                <div class="row divCampos">
+									<div class="col-md-2">
+										E-mail:
+									</div>
+									<div class="col-md-6">
+										<input type="text" id="email" class="form-control"/> 
+									</div>
                                 </div>
 
                             </div>
-                            <!-- /.container -->
-
                         </div>
-                        <!-- /.banner -->
+                    </main>
+                </div>
+                <!-- /.container -->
+
+        </div>
+
+        <div class="banner">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Conheça mais em:</h2>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-inline banner-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="https://facebook.com/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.container -->
+
+        </div>
+        <!-- /.banner -->
 		
 	</body>
 </html>

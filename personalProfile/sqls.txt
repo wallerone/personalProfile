@@ -1,0 +1,10 @@
+CREATE database personalProfile;
+
+create table telefone(
+	id bigint NOT NULL,
+  	nomePessoa character varying(255),
+	numero character varying(255),
+	email character varying(255),
+	usuario_id bigint NOT NULL,
+	PRIMARY KEY (id)
+);
