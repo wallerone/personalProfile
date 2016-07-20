@@ -1,5 +1,21 @@
 CREATE database personalProfile;
 
+create table usuario(
+	id bigint NOT NULL,
+  	nome character varying(255),
+	endereco character varying(255),
+	email character varying(255),
+	telefone character varying(255),
+	login character varying(255),
+	senha character varying(255),
+	PRIMARY KEY (id)
+);
+
+insert into usuario(id, nome, endereco, email, telefone, login,
+senha) values(1, 'Mario', 'Rua C-45 Qd 123 Lt3', 'mariohj94@gmail.com',
+'(62)8218-0015', 'mario','1');
+
+
 create table telefone(
 	id bigint NOT NULL,
   	nomePessoa character varying(255),
@@ -8,3 +24,5 @@ create table telefone(
 	usuario_id bigint NOT NULL,
 	PRIMARY KEY (id)
 );
+
+insert into telefone(id, nomePessoa, numero, email, usuario_id) values(1, 'Mário', '(62)8218-0015','mariohj94@gmail.com',1);

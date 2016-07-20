@@ -67,27 +67,29 @@
                     <div class="col-lg-12">
                         <div class="intro-message">
                             <!-- Login -->
-                            <div class="panel panel-primary divLogin">
-                                <div class="panel-heading">
-                                    Login Personal Profile
-                                </div>
-                                <div class="panel-body">
-                                    Usuário: 
-                                    <div class="input-group">
-                                        <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
-                                        <input type="text" id="usuario" class="form-control">
-                                    </div>
-                                    Senha:
-                                    <div class="input-group">
-                                        <span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon1"></span>
-                                        <input type="password" id="senha" class="form-control">
-                                    </div>
-                                    <div class="divBtnEntrar">
-                                        <button class="btn btn-success btnEntrar" type="button"
-                                        onclick="redirecionarPaginaPersonal()">Entrar</button>
-                                    </div>
-                                </div>
-                            </div>
+                            <form action="usuarioLogin" method="post"  role="form" data-toggle="validator" >
+                				<input type="hidden" id="action" name="action" value="autenticar">
+	                            <div class="panel panel-primary divLogin">
+	                                <div class="panel-heading">
+	                                    Login Personal Profile
+	                                </div>
+	                                <div class="panel-body">
+	                                    Usuário: 
+	                                    <div class="input-group">
+	                                        <span class="input-group-addon glyphicon glyphicon-user" id="basic-addon1"></span>
+	                                        <input type="text" id="login" name="login" class="form-control">
+	                                    </div>
+	                                    Senha:
+	                                    <div class="input-group">
+	                                        <span class="input-group-addon glyphicon glyphicon-lock" id="basic-addon1"></span>
+	                                        <input type="password" id="senha" name="senha" class="form-control">
+	                                    </div>
+	                                    <div class="divBtnEntrar">
+	                                        <button class="btn btn-success btnEntrar" type="submit">Entrar</button>
+	                                    </div>
+	                                </div>
+	                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>

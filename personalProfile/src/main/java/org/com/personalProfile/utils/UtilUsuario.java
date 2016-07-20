@@ -14,4 +14,14 @@ public class UtilUsuario {
 		HttpSession session = req.getSession();
 		return (Usuario)session.getAttribute("usuarioLogado");
 	}
+	
+	public static void setUsusarioLogado(HttpServletRequest req, Usuario usuario) {
+		HttpSession session = req.getSession();
+		session.setAttribute("usuarioLogado", usuario);
+	}
+	
+	public static void invalidadeSession(HttpServletRequest req){
+		HttpSession session = req.getSession();
+		session.invalidate();
+	}
 }
