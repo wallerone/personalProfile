@@ -33,7 +33,7 @@ public class FilterPersonalProfile implements Filter, Serializable{
 	        if (isDoFilter(reqURI, ses, req)) {
 	            filterChain.doFilter(request, response);
 	        }else{
-	        	res.sendRedirect(req.getContextPath() + "/login.jsf"); 
+	        	res.sendRedirect(req.getContextPath() + "/usuarioLogin"); 
 	        }
 		}catch(Throwable t) {
 	     System.out.println( t.getMessage());
@@ -49,8 +49,8 @@ public class FilterPersonalProfile implements Filter, Serializable{
 	}
 	
 	public boolean isDoFilter(String reqURI, HttpSession ses, HttpServletRequest req){
-		if((reqURI.startsWith(req.getContextPath()) || reqURI.startsWith(req.getContextPath() + "/img")
-	        		|| (reqURI.startsWith(req.getContextPath() + "/login.jsp"))
+		if((reqURI.startsWith(req.getContextPath() + "/img") || reqURI.startsWith(req.getContextPath() + "/resources") 
+				|| (reqURI.startsWith(req.getContextPath() + "/usuarioLogin"))
 	        		||	(ses != null && ses.getAttribute("usuarioLogado") != null))){
 			return true;
 		}

@@ -5,23 +5,23 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Profile</title>
-		<link rel="stylesheet" href="../resources/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="../resources/css/bootstrap-theme.min.css"/>
-		<link rel="stylesheet" href="../resources/css/personalProfile.css"/>
+		<link rel="stylesheet" href="resources/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="resources/css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" href="resources/css/personalProfile.css"/>
 		<script type="text/javascript" src="bootstrap.min.js"></script>
-		<script type="text/javascript" src="../resources/js/jquery-1.12.3.min.js"></script>
-		<script type="text/javascript" src="../resources/js/jquery-mask-min.js"></script>
-		<script type="text/javascript" src="../resources/js/personalProfile.js"></script>
-		<link rel="icon" href="../resources/img/perfil2.jpg">
+		<script type="text/javascript" src="resources/js/jquery-1.12.3.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-mask-min.js"></script>
+		<script type="text/javascript" src="resources/js/personalProfile.js"></script>
+		<link rel="icon" href="resources/img/perfil2.jpg">
                 
                 <!-- Bootstrap Core CSS -->
-                <link href="../resources/css/bootstrap.min.css" rel="stylesheet">
+                <link href="resources/css/bootstrap.min.css" rel="stylesheet">
 
                 <!-- Custom CSS -->
-                <link href="../resources/css/landing-page.css" rel="stylesheet">
+                <link href="resources/css/landing-page.css" rel="stylesheet">
 
                 <!-- Custom Fonts -->
-                <link href="../resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+                <link href="resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
                 <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
                 
 	</head>
@@ -61,7 +61,7 @@
                             <!-- Menu Header -->
                             <div class="barraLadoEsquerdo">
                                 <div class="btn-group-vertical menuEsquerdo" role="group">
-                                    <img alt="Foto do perfil" src="../resources/img/perfil.jpg"
+                                    <img alt="Foto do perfil" src="resources/img/perfil.jpg"
                                                 class="imagemPerfil">
                                     <button type="button" class="btn btn-default" onclick="redirecionarPaginaProfile()">Dados pessoais</button>
                                     <button type="button" class="btn btn-default" onclick="redirecionarAgendaPessoal()">Agenda Pessoal</button>
@@ -73,46 +73,45 @@
                     </div>
                 </div>
                 <!-- Dados Pessoais // Preencher -->
-                    <main>
-                        <div class="corpoDireito">
-                            <div class="bodyDados">
-                                <div class="row divCampos">
-									<div class="col-md-2">
-										Nome:
-									</div>
-									<div class="col-md-6">
-										<input type="text" id="telefone" class="form-control"/> 
-									</div>
+                <main>
+                	<div class="corpoDireito">
+                    	<div class="bodyDados">
+                            <div class="row divCampos">
+								<div class="col-md-2">
+									Nome:
 								</div>
-								<div class="row divCampos">
-									<div class="col-md-2">
-										Endereço:
-									</div>
-									<div class="col-md-6">
-										<input type="text" id="telefone" class="form-control"/> 
-									</div>
+								<div class="col-md-6">
+									<input type="text" id="nome" class="form-control" value="${usuario.nome}"/> 
 								</div>
-                                <div class="row divCampos">
-									<div class="col-md-2">
-										Telefone:
-									</div>
-									<div class="col-md-6">
-										<input type="text" id="telefone" class="form-control"/> 
-									</div>
-                               	</div>
-                                <div class="row divCampos">
-									<div class="col-md-2">
-										E-mail:
-									</div>
-									<div class="col-md-6">
-										<input type="text" id="email" class="form-control"/> 
-									</div>
-                                </div>
-
+							</div>
+							<div class="row divCampos">
+								<div class="col-md-2">
+									Endereço:
+								</div>
+								<div class="col-md-6">
+									<input type="text" id="telefone" class="form-control" value="${usuario.endereco}"/> 
+								</div>
+							</div>
+                            <div class="row divCampos">
+								<div class="col-md-2">
+									Telefone:
+								</div>
+								<div class="col-md-6">
+									<input type="text" id="telefone" class="form-control" value="${usuario.telefone}"/> 
+								</div>
+                           	</div>
+                            <div class="row divCampos">
+								<div class="col-md-2">
+									E-mail:
+								</div>
+								<div class="col-md-6">
+									<input type="text" id="email" class="form-control" value="${usuario.email}"/> 
+								</div>
                             </div>
                         </div>
-                    </main>
-                </div>
+                    </div>
+                </main>
+       		</div>
                 <!-- /.container -->
 
         </div>
