@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.com.personalProfile.dao.TelefoneDao;
 import org.com.personalProfile.entity.Telefone;
+import org.com.personalProfile.entity.Usuario;
 
 public class TelefoneModel {
 
@@ -17,6 +18,10 @@ public class TelefoneModel {
 
 	public List<Telefone> buscaTelefoneByUsuarioId(Long usuarioId) {
 		return getTelefoneDao().buscaTelefonesByUsuarioId(usuarioId);
+	}
+	
+	public List<Telefone> buscaTelefoneByQuery(String query, Usuario usuario) {
+		return getTelefoneDao().buscaTelefoneByQuery(query, usuario);
 	}
 	
 	public boolean salvarAlterarTelefone(Telefone telefone){

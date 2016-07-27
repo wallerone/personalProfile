@@ -26,7 +26,7 @@
     <body>
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-            <div class="container topnav">
+            <div class="container topnav" style="margin-left:inherit !important">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -51,7 +51,7 @@
 
         <!-- Header -->
         <div class="intro-header-dadospessoais">
-            <div class="container">
+            <div class="container" style="margin-left:inherit !important">
 
                 <div class="row">
                     <div class="col-lg-12">
